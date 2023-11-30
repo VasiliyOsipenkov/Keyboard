@@ -1,0 +1,42 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <item type="id" name="tvName" />
+    <item type="id" name="ScrollView01" />
+    <item type="id" name="tvSortSym" />
+    <item type="id" name="tvSortEng" />
+    <item type="id" name="tvSortCode" />
+    <item type="id" name="lvLayout" />
+    <item type="id" name="showScanCode" />
+    <item type="id" name="scanCodeTitle" />
+    <item type="id" name="codeTitle" />
+    <item type="id" name="scanCode" />
+    <item type="id" name="code" />
+    <item type="id" name="device_info" />
+    <item type="id" name="meta_info" />
+    <item type="id" name="input" />
+    <item type="id" name="listView" />
+    <item type="id" name="cancel" />
+    <item type="id" name="ok" />
+    <item type="id" name="customToggleView" />
+    <item type="id" name="LinearLayout01" />
+    <item type="id" name="lvSoftKeyboards" />
+    <item type="id" name="keyboardPreview" />
+    <item type="id" name="keyboard" />
+    <item type="id" name="separator" />
+    <item type="id" name="tvSymbol" />
+    <item type="id" name="tvSymbolEng" />
+    <item type="id" name="tvCode" />
+    <item type="id" name="cbItem" />
+    <item type="id" name="ivFlag" />
+    <item type="id" name="keyboardView" />
+    <item type="id" name="closeButton" />
+    <item type="id" name="increment" />
+    <item type="id" name="timepicker_input" />
+    <item type="id" name="decrement" />
+    <item type="id" name="picker" />
+    <item type="id" name="testVibrate" />
+    <item type="id" name="mode_normal" />
+    <item type="id" name="mode_url" />
+    <item type="id" name="mode_email" />
+    <item type="id" name="mode_im" />
+</resources>

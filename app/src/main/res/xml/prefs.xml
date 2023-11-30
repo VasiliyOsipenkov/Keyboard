@@ -1,0 +1,36 @@
+<?xml version="1.0" encoding="utf-8"?>
+<PreferenceScreen android:title="@string/russian_ime_settings" android:key="russian_ime_settings"
+  xmlns:android="http://schemas.android.com/apk/res/android">
+    <CheckBoxPreference android:persistent="true" android:title="@string/pref_show_status_icon_title" android:key="pref_show_status_icon" android:summary="@string/pref_show_status_icon_summary" android:defaultValue="true" />
+    <PreferenceScreen android:title="@string/settings_softkeyboard"
+      xmlns:android="http://schemas.android.com/apk/res/android">
+        <CheckBoxPreference android:persistent="true" android:title="@string/auto_cap" android:key="auto_cap_soft" android:summary="@string/auto_cap_summary" android:defaultValue="true" />
+        <CheckBoxPreference android:persistent="true" android:title="@string/vibrate_on_keypress" android:key="vibrate_on" android:summary="@string/vibrate_on_keypress_summary" android:defaultValue="true" />
+        <ru.androidteam.rukeyboard.view.NumberPickerPreference android:title="@string/vibrate_power" android:key="pref_vibrate_time" android:dependency="vibrate_on" android:defaultValue="16" />
+        <CheckBoxPreference android:persistent="true" android:title="@string/sound_on_keypress" android:key="sound_on" android:summary="@string/sound_on_keypress_summary" android:defaultValue="false" />
+        <PreferenceScreen android:title="@string/pref_keyboard_list_title" android:key="pref_keyhard_layout_preview" android:summary="@string/key_layout_preview_summary" />
+    </PreferenceScreen>
+    <PreferenceScreen android:title="@string/settings_hardkeyboard"
+      xmlns:android="http://schemas.android.com/apk/res/android">
+        <PreferenceCategory android:title="@string/pref_category_layout_config">
+            <PreferenceScreen android:title="@string/hardkeys_layout_title" android:key="hard_layout_list" />
+            <PreferenceScreen android:title="@string/key_layout_preview_title" android:key="pref_key_layout_preview" android:summary="@string/key_layout_preview_summary" />
+            <PreferenceScreen android:title="@string/lang_toggle_title" android:key="key_lang_toggle" />
+            <PreferenceScreen android:title="@string/pref_key_keyboard_test" android:key="pref_key_keyboard_test" android:summary="@string/pref_key_keyboard_test_summary" />
+            <EditTextPreference android:title="@string/hard_layouts_on_sdcard" android:key="key_external_layout_path" />
+            <CheckBoxPreference android:persistent="true" android:title="@string/swap_zy" android:key="swap_zy" android:summary="@string/swap_zy_summary" android:defaultValue="false" />
+        </PreferenceCategory>
+        <PreferenceCategory android:title="@string/pref_other">
+            <CheckBoxPreference android:persistent="true" android:title="@string/auto_cap" android:key="auto_cap_hard" android:summary="@string/auto_cap_summary" android:defaultValue="true" />
+            <CheckBoxPreference android:persistent="true" android:title="@string/hard_vibrate_on_toggle" android:key="pref_hard_vibrate_on_toggle" android:summary="@string/hard_vibrate_on_toggle_summary" android:defaultValue="false" />
+        </PreferenceCategory>
+        <PreferenceCategory android:title="@string/delay_category">
+            <CheckBoxPreference android:persistent="true" android:title="@string/delay_title" android:key="key_delay" android:defaultValue="true" />
+            <ListPreference android:entries="@array/delay_values" android:layout="?android:preferenceLayoutChild" android:title="@string/delay_list_title" android:key="key_delay_time" android:dependency="key_delay" android:defaultValue="@string/delay_default_value" android:dialogTitle="@string/delay_dialog_title" android:entryValues="@array/delay_values" />
+        </PreferenceCategory>
+    </PreferenceScreen>
+    <PreferenceCategory android:title="@string/pref_about_category">
+        <PreferenceScreen android:title="@string/how_to_activate" android:key="how_to_activate" />
+        <EditTextPreference android:enabled="false" android:title="@string/version" android:key="pref_program_version" />
+    </PreferenceCategory>
+</PreferenceScreen>

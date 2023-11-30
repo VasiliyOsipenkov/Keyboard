@@ -1,0 +1,117 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <string-array name="softkeys_names">
+        <item>Русская</item>
+        <item>Русская T9</item>
+        <item>Русская 5 рядов</item>
+        <item>Русская компактная</item>
+        <item>Русская фонетическая</item>
+        <item>Русская Treo650 (Яшерты)</item>
+    </string-array>
+    <string-array name="softkeys_xmlnames">
+        <item>russian_qwerty</item>
+        <item>russian_t9</item>
+        <item>russian_5rows</item>
+        <item>russian_compact</item>
+        <item>russian_phonetic_v</item>
+        <item>russian_treo650</item>
+    </string-array>
+    <string-array name="softkeys_flags">
+        <item>ru_flag</item>
+        <item>ru_flag</item>
+        <item>ru_flag</item>
+        <item>ru_flag</item>
+        <item>ru_flag</item>
+        <item>ru_flag</item>
+    </string-array>
+    <string-array name="hardkeys_layout_names">
+        <item>G1 Транслит RU</item>
+        <item>G1 Транслит UA</item>
+        <item>G1 QWERTY RU</item>
+        <item>HTC Desire Z</item>
+        <item>HTC Desire Z Phonetic</item>
+        <item>HTC Desire Z (ESP)</item>
+        <item>HTC Desire Z (Admin)</item>
+        <item>HTC T-Mobile G2 RU</item>
+        <item>HTC T-Mobile G2 RU V2</item>
+        <item>HTC T-Mobile G2 RU-UA</item>
+        <item>HTC Raphael</item>
+        <item>Motorola Milestone RU</item>
+        <item>Motorola Milestone PRE RU</item>
+        <item>Motorola Milestone RU Phonetic(DE)</item>
+        <item>Motorola Droid2Global RU</item>
+        <item>X10 Mini Pro RU</item>
+        <item>Acer E130 RU</item>
+        <item>Zeus QWERTY</item>
+        <item>ЯШЕРТЫ (Treo 650)</item>
+        <item>Внешняя клавиатура</item>
+    </string-array>
+    <string-array name="hardkeys_layout_values">
+        <item>g1_translit_ru</item>
+        <item>g1_translit_ua</item>
+        <item>g1_qwerty_ru</item>
+        <item>htc_desire_z_ru</item>
+        <item>htc_desire_z_phonetic_ru</item>
+        <item>htc_desire_z_esp_ru</item>
+        <item>htc_desire_z_admin_ru</item>
+        <item>htc_tmobile_ru</item>
+        <item>htc_tmobile_ru_v2</item>
+        <item>htc_tmobile_ru_ua</item>
+        <item>htc_raphael_ru</item>
+        <item>motorola_milestone_ru</item>
+        <item>motorola_milestone_pre_ru</item>
+        <item>motorola_milestone_ru_ph</item>
+        <item>motorola_droid2global_ru</item>
+        <item>x10minipro_ru</item>
+        <item>acer_e130_ru</item>
+        <item>zeus_qwerty</item>
+        <item>treo650_ru</item>
+        <item>external</item>
+    </string-array>
+    <string-array name="hardkeys_flags">
+        <item>ru_flag</item>
+        <item>ua_flag</item>
+        <item>ru_flag</item>
+        <item>ru_flag</item>
+        <item>ru_flag</item>
+        <item>ru_flag</item>
+        <item>ru_flag</item>
+        <item>ru_flag</item>
+        <item>ru_flag</item>
+        <item>ru_flag</item>
+        <item>ru_flag</item>
+        <item>ru_flag</item>
+        <item>ru_flag</item>
+        <item>ru_flag</item>
+        <item>ru_flag</item>
+        <item>ru_flag</item>
+        <item>ru_flag</item>
+        <item>ru_flag</item>
+        <item>ru_flag</item>
+        <item>ru_flag</item>
+    </string-array>
+    <string-array name="delay_values">
+        <item>500</item>
+        <item>600</item>
+        <item>700</item>
+        <item>800</item>
+        <item>900</item>
+        <item>1000</item>
+        <item>1100</item>
+        <item>1200</item>
+        <item>1300</item>
+        <item>1400</item>
+        <item>1500</item>
+        <item>1600</item>
+    </string-array>
+    <string-array name="lang_toggle_entries">
+        <item>ALT+SHIFT</item>
+        <item>ALT+SPACE</item>
+        <item>SHIFT+SPACE</item>
+    </string-array>
+    <string-array name="lang_toggle_values">
+        <item>alt_shift</item>
+        <item>alt_space</item>
+        <item>shift_space</item>
+    </string-array>
+</resources>

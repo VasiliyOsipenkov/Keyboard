@@ -1,0 +1,15 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <string-array name="lang_toggle_entries">
+        <item>CTRL+SHIFT</item>
+        <item>ALT+SHIFT</item>
+        <item>ALT+SPACE</item>
+        <item>SHIFT+SPACE</item>
+    </string-array>
+    <string-array name="lang_toggle_values">
+        <item>ctrl_shift</item>
+        <item>alt_shift</item>
+        <item>alt_space</item>
+        <item>shift_space</item>
+    </string-array>
+</resources>

@@ -1,0 +1,119 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <string name="default_hard_keyboard">hard_translit_ru.xml</string>
+    <string name="default_soft_keyboard">russian_qwerty</string>
+    <string name="default_lang_toggle">shift_space</string>
+    <string name="ime_name">Kiosk keyboard</string>
+    <string name="version">Версия</string>
+    <string name="word_separators">".,;:!?
+()[]*&amp;@{}/&lt;>_+=|"</string>
+    <string name="label_go_key">Поиск</string>
+    <string name="label_next_key">Далее</string>
+    <string name="label_done_key">Готово</string>
+    <string name="label_send_key">Отправить</string>
+    <string name="label_symbol_key">123</string>
+    <string name="label_phone_key">123</string>
+    <string name="label_alpha_key">АБВ</string>
+    <string name="label_alt_key">ALT</string>
+    <string name="cancel">Отмена</string>
+    <string name="settings_softkeyboard">Программная клавиатура</string>
+    <string name="settings_hardkeyboard">Аппаратная клавиатура</string>
+    <string name="russian_ime_settings">Настройки клавиатуры</string>
+    <string name="ime_settings">Выбрать метод ввода</string>
+    <string name="vibrate_on_keypress">Вибрация</string>
+    <string name="vibrate_on_keypress_summary">Вибрация при нажатии клавиш</string>
+    <string name="vibrate_test">Тест</string>
+    <string name="vibrate_power">Сила вибрации</string>
+    <string name="sound_on_keypress">Звук</string>
+    <string name="sound_on_keypress_summary">Звук при нажатии клавиш</string>
+    <string name="auto_cap">Верхний регистр</string>
+    <string name="auto_cap_summary">Делать заглавной первую букву предложения</string>
+    <string name="pref_show_status_icon_title">Показывать значок</string>
+    <string name="pref_show_status_icon_summary">"Отображать значок текущей раскладки в панели
+        оповещения"</string>
+    <string name="pref_keyboard_list_title">Выбор клавиатуры</string>
+    <string name="pref_keyboard_dtitle">Выберите клавиатуру</string>
+    <string name="pref_about_category">О программе</string>
+    <string name="key_layout_preview_title">Просмотр раскладки</string>
+    <string name="key_layout_preview_summary">Просмотр сведений о текущей раскладке</string>
+    <string name="hard_vibrate_on_toggle">Вибрация</string>
+    <string name="hard_vibrate_on_toggle_summary">"Телефон будет вибрировать при смене раскладки
+        клавиатуры"</string>
+    <string name="hardkeys_layout_dialog">Список доступных раскладок</string>
+    <string name="hardkeys_layout_title">Выбор раскладки</string>
+    <string name="pref_key_keyboard_test">Тест клавиатуры</string>
+    <string name="pref_key_keyboard_test_summary">Просмотр кодов для клавиш</string>
+    <string name="swap_zy">Поменять Z и Y</string>
+    <string name="swap_zy_summary">Z и Y меняются местами, для клавиатур с раскладкой qwertz</string>
+    <string name="keyboard_qwertz">Раскладка QWERTZ</string>
+    <string name="delay_category">Задержка при наборе</string>
+    <string name="delay_title">Использовать задержку</string>
+    <string name="delay_list_title">Время</string>
+    <string name="delay_dialog_title">Выберите время</string>
+    <string name="delay_default_value">700</string>
+    <string name="label_ru_key">RU</string>
+    <string name="label_ua_key">UA</string>
+    <string name="hit_correction">Исправлять опечатки</string>
+    <string name="hit_correction_summary">Включить исправление ошибок при вводе</string>
+    <string name="hit_correction_land">Ошибки при вводе в горизонтальной ориентации</string>
+    <string name="hit_correction_land_summary">Включить исправление ошибок при вводе</string>
+    <string name="auto_correction">Предложение слов</string>
+    <string name="auto_correction_summary">Автоматически исправлять предыдущее слово</string>
+    <string name="prediction">Предложение слов</string>
+    <string name="prediction_category">Настройки предложения слов</string>
+    <string name="prediction_summary">Включить автоматическое завершение слов при вводе</string>
+    <string name="auto_complete_dialog_title">Автоматическое завершение</string>
+    <string name="prediction_landscape">Увеличить размер текстового поля</string>
+    <string name="prediction_landscape_summary">"Скрывать предложение слов в горизонтальной
+        ориентации"</string>
+    <string name="auto_punctuate">Автоматическая пунктуация</string>
+    <string name="symbol">Символ</string>
+    <string name="symbol_eng">Клавиша</string>
+    <string name="symbol_code">Код</string>
+    <string name="how_to_activate">Активация клавиатуры</string>
+    <string name="activating_keyboard">" 1. Необходимо активировать клавиатуру в системных
+        настройках. Для этого нужно
+        зайти в Настройки->Язык и текст (Settings->Locale &amp; text) и активировать Russian
+        Keyboard"</string>
+    <string name="activating_ime">" 2. Нужно выбрать клавиатуру в качестве основного метода ввода.
+        Для этого на любом
+        поле ввода нужно сделать долгий клик и в открывшемся диалоге выбрать Метод ввода (Input
+        Method) и выбрать
+        Russian Keyboard"</string>
+    <string name="added_word">%s : Saved</string>
+    <string name="alternates_for_a">àáâãäåæ</string>
+    <string name="alternates_for_e">èéêěë</string>
+    <string name="alternates_for_i">ìíîï</string>
+    <string name="alternates_for_o">òóôõöœø</string>
+    <string name="alternates_for_u">ùúûüů</string>
+    <string name="alternates_for_s">§ßš</string>
+    <string name="alternates_for_n">ñ</string>
+    <string name="alternates_for_c">çč</string>
+    <string name="alternates_for_y">ýÿ</string>
+    <string name="alternates_for_z">ž</string>
+    <string name="alternates_for_r">ř</string>
+    <string name="alternates_for_ru_sign">ъ</string>
+    <string name="alternates_for_ru_e">ё</string>
+    <string name="alternates_for_ru_sh">щ</string>
+    <string name="alternates_for_ua_g">ґ</string>
+    <string name="alternates_for_ua_i">ї</string>
+    <string name="rukeyboard">rukeyboard</string>
+    <string name="keyboard_test_input_hint">"Press any button to see it's code"</string>
+    <string name="keyboard_test_show_scancode">Show scan code</string>
+    <string name="keyboard_test_scancode_title">Scan Code</string>
+    <string name="keyboard_test_code_title">Android KeyCode</string>
+    <string name="pref_category_layout_config">Настройка раскладки</string>
+    <string name="lang_toggle_title">Переключение раскладки</string>
+    <string name="pref_other">Разное</string>
+    <string name="hard_layouts_on_sdcard_not_found">Ничего не найдено</string>
+    <string name="hard_layouts_on_sdcard">Раскладки на SDCARD</string>
+    <string name="hard_layouts_in_apk">Встроенные раскладки</string>
+    <string name="hard_layouts_in_data">Раскладки в data</string>
+    <string name="hard_layout_cant_be_found">Не могу найти текущую раскладку: %s, будет использована раскладка по умолчанию</string>
+    <string name="lang_toggle_my_keycode">Свой код</string>
+    <string name="lang_toggle_custom_text">"Нажмите кнопку, которая будет использована для переключения раскладок. 
+
+Или 'назад' для отмены."</string>
+    <string name="APKTOOL_DUMMY_1f" />
+    <string name="APKTOOL_DUMMY_20" />
+</resources>

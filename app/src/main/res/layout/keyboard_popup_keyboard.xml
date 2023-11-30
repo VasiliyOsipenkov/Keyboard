@@ -1,0 +1,6 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout android:orientation="horizontal" android:background="@drawable/keyboard_popup_panel_background" android:layout_width="fill_parent" android:layout_height="wrap_content"
+  xmlns:android="http://schemas.android.com/apk/res/android">
+    <ru.androidteam.rukeyboard.LatinKeyboardView android:id="@id/keyboardView" android:background="@color/transparent" android:layout_width="fill_parent" android:layout_height="wrap_content" android:keyPreviewLayout="@layout/keyboard_key_preview" android:popupLayout="@layout/keyboard_popup_keyboard" style="@style/KeyboardView" />
+    <ImageButton android:layout_gravity="center" android:id="@id/closeButton" android:background="@null" android:clickable="true" android:layout_width="wrap_content" android:layout_height="wrap_content" android:layout_marginLeft="8.0dip" android:src="@drawable/closemy" />
+</LinearLayout>

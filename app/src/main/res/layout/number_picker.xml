@@ -1,0 +1,7 @@
+<?xml version="1.0" encoding="utf-8"?>
+<merge
+  xmlns:android="http://schemas.android.com/apk/res/android">
+    <ru.androidteam.rukeyboard.view.NumberPickerButton android:textSize="26.0sp" android:textColor="#ff000000" android:id="@id/increment" android:layout_width="fill_parent" android:layout_height="wrap_content" android:text="+" />
+    <EditText android:textSize="30.0sp" android:textColor="@android:color/primary_text_light" android:gravity="center" android:id="@id/timepicker_input" android:layout_width="fill_parent" android:layout_height="wrap_content" android:singleLine="true" style="?android:textAppearanceLargeInverse" />
+    <ru.androidteam.rukeyboard.view.NumberPickerButton android:textSize="26.0sp" android:textColor="#ff000000" android:id="@id/decrement" android:layout_width="fill_parent" android:layout_height="wrap_content" android:text="-" />
+</merge>
