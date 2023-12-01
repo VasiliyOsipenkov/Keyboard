@@ -1,0 +1,62 @@
+<?xml version="1.0" encoding="utf-8"?>
+
+<keyboardLayout
+    layoutName="Standard BG"
+    layoutDescription=""
+    flagIcon="ru.androidteam.rukeyboard:drawable/bg_flag"
+
+    authorName="zolern" authorEmail="entopalov@gmail.com" authorWebSite="http://"
+    versionName="1.0"
+    versionCode="1"
+    >
+
+    <key code="9" char="2" shiftChar="?" />
+    <key code="10" char="3" shiftChar="+" />
+    <key code="11" char="4" shiftChar="&quot;" />
+    <key code="12" char="5" shiftChar="€" />
+    <key code="13" char="6" shiftChar="=" />
+    <key code="14" char="7" shiftChar=":" />
+    <key code="15" char="8" shiftChar="/" />
+    <key code="16" char="9" shiftChar="-" />
+    <key code="7" char="0" shiftChar="№" />
+    <key code="69" char="-" shiftChar="I" />
+    <key code="70" char="." shiftChar="V" />
+
+    <key code="45" char="," shiftChar="ы" />
+    <key code="51">у</key>
+    <key code="33">е</key>
+    <key code="46">и</key>
+    <key code="48">ш</key>
+    <key code="53">щ</key>
+    <key code="49">к</key>
+    <key code="37">с</key>
+    <key code="43">д</key>
+    <key code="44">з</key>
+    <key code="71">ц</key>
+    <key code="72" char=";" shiftChar="§" />
+
+    <key code="29">ь</key>
+    <key code="47">я</key>
+    <key code="32">а</key>
+    <key code="34">о</key>
+    <key code="35">ж</key>
+    <key code="36">г</key>
+    <key code="38">т</key>
+    <key code="39">н</key>
+    <key code="40">в</key>
+    <key code="74">м</key>
+    <key code="75">ч</key>
+    <key code="73" char="(" shiftChar=")" />
+
+    <key code="54">ю</key>
+    <key code="52">й</key>
+    <key code="31">ъ</key>
+    <key code="50">э</key>
+    <key code="30">ф</key>
+    <key code="42">х</key>
+    <key code="41">п</key>
+    <key code="55">р</key>
+    <key code="56">л</key>
+    <key code="76">б</key>
+
+</keyboardLayout>

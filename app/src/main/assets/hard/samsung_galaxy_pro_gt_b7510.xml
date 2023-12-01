@@ -1,0 +1,92 @@
+<?xml version="1.0" encoding="utf-8"?>
+
+<keyboardLayout
+    layoutName="Samsung Galaxy Pro (GT-B7510)"
+    layoutDescription=""
+    flagIcon="ru.androidteam.rukeyboard:drawable/ru_flag"
+
+    authorName="vovkab" authorEmail="vovkab@gmail.com" authorWebSite="http://androidteam.ru"
+    versionName="1.0"
+    versionCode="1"
+    >
+
+    <key code="63" isLangToggle="true" />
+
+    <key code="45">й</key>
+    <key code="51">ц</key>
+    <key code="33">у</key>
+    <key code="46">к</key>
+    <key code="53">н</key>
+    <key code="43">з</key>
+    <key code="29">ф</key>
+    <key code="47">ы</key>
+    <key code="32">в</key>
+    <key code="34">а</key>
+    <key code="35">п</key>
+    <key code="40">д</key>
+    <key code="54">я</key>
+    <key code="52">ч</key>
+    <key code="31">с</key>
+    <key code="50">м</key>
+    <key code="30">и</key>
+    <key code="42">т</key>
+    <key code="7">ю</key>
+
+    <key code="36" char="р">
+        <altChar char=";" system=";" />
+    </key>
+
+    <key code="38" char="о">
+        <altChar char=":" system=":" />
+    </key>
+
+    <key code="39" char="л">
+        <altChar char="'" system="'" />
+    </key>
+
+    <key code="40" char="д">
+        <altChar char="&quot;" system="&quot;" />
+    </key>
+
+    <key code="49" char="г">
+        <altChar char="№" system="№" />
+    </key>
+
+    <keys>
+        <key code="48">е</key>
+        <key code="48">ё</key>
+    </keys>
+
+    <keys>
+        <key code="37" char="ш">
+            <altChar char="&amp;" system="&amp;" />
+        </key>
+        <key code="37" char="щ">
+            <altChar char="&amp;" system="&amp;" />
+        </key>
+    </keys>
+
+    <keys>
+        <key code="44">х</key>
+        <key code="44">ъ</key>
+    </keys>
+
+    <keys>
+        <key code="41" char="ь">
+            <altChar char="?" system="?" />
+        </key>
+        <key code="41" char="б">
+            <altChar char="?" system="?" />
+        </key>
+    </keys>
+
+    <keys>
+        <key code="75" char="ж">
+            <altChar char="," system="," />
+        </key>
+        <key code="75" char="э">
+            <altChar char="," system="," />
+        </key>
+    </keys>
+
+</keyboardLayout>

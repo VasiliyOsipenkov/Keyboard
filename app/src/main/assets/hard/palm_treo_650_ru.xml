@@ -1,0 +1,42 @@
+<?xml version="1.0" encoding="utf-8"?>
+
+<keyboardLayout
+    layoutName="Palm Treo 650 RU"
+    layoutDescription=""
+    flagIcon="ru.androidteam.rukeyboard:drawable/ru_flag"
+
+    authorName="vovkab" authorEmail="vovkab@gmail.com" authorWebSite="http://androidteam.ru"
+    versionName="1.0"
+    versionCode="1"
+    >
+
+    <key code="45">я</key>
+    <key code="46">р</key>
+    <key code="48">т</key>
+    <key code="53">ы</key>
+    <key code="43">о</key>
+    <key code="44">п</key>
+    <key code="29">а</key>
+    <key code="47">с</key>
+    <key code="32">д</key>
+    <key code="34">ф</key>
+    <key code="35">г</key>
+    <key code="36">х</key>
+    <key code="38">ж</key>
+    <key code="39">к</key>
+    <key code="40">л</key>
+    <key code="54">з</key>
+    <key code="50">в</key>
+    <key code="30">б</key>
+    <key code="42">н</key>
+    <key code="41">м</key>
+
+    <key code="31" char="ц" altChar="ч" />
+    <key code="33" char="е" altChar="э" />
+    <key code="37" char="и" altChar="й" />
+    <key code="49" char="у" altChar="ю" />
+    <key code="51" char="ш" altChar="щ" />
+    <key code="52" char="ь" altChar="ъ" />
+    <key code="77" altChar="ё" />
+
+</keyboardLayout>

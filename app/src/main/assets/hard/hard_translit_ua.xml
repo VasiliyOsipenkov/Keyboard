@@ -1,0 +1,137 @@
+<?xml version="1.0" encoding="utf-8"?>
+
+<keyboardLayout
+    layoutName="Translit UA"
+    layoutDescription=""
+    flagIcon="ru.androidteam.rukeyboard:drawable/ua_flag"
+
+    authorName="vovkab" authorEmail="vovkab@gmail.com" authorWebSite="http://androidteam.ru"
+    versionName="1.0"
+    versionCode="1"
+    >
+
+    <key code="29">а</key>
+    <key code="30">б</key>
+    <key code="31">ц</key>
+    <key code="32">д</key>
+    <key code="33">е</key>
+    <key code="34">ф</key>
+    <key code="35">г</key>
+    <key code="36">х</key>
+    <key code="38">й</key>
+    <key code="39">к</key>
+    <key code="41">м</key>
+    <key code="42">н</key>
+    <key code="43">о</key>
+    <key code="44">п</key>
+    <key code="45">ь</key>
+    <key code="46">р</key>
+    <key code="47">с</key>
+    <key code="48">т</key>
+    <key code="49">у</key>
+    <key code="50">в</key>
+    <key code="51">щ</key>
+    <key code="52">х</key>
+    <key code="53">и</key>
+    <key code="54">з</key>
+
+    <key code="40" char="л" altChar="’" />
+
+    <keys>
+        <key code="31">ц</key>
+        <key code="36">ч</key>
+    </keys>
+
+    <keys>
+        <key code="33">е</key>
+        <key code="36">э</key>
+    </keys>
+
+    <keys>
+        <key code="35">г</key>
+        <key code="35">ґ</key>
+    </keys>
+
+    <keys>
+        <key code="35">г</key>
+        <key code="36">ґ</key>
+    </keys>
+
+    <keys>
+        <key code="37">i</key>
+        <key code="37">ї</key>
+    </keys>
+
+    <keys>
+        <key code="38">й</key>
+        <key code="33">є</key>
+    </keys>
+
+    <keys>
+        <key code="38">й</key>
+        <key code="49">ю</key>
+    </keys>
+
+    <keys>
+        <key code="38">ы</key>
+        <key code="29">я</key>
+    </keys>
+
+    <keys>
+        <key code="38">й</key>
+        <key code="37">ї</key>
+    </keys>
+
+
+    <keys>
+        <key code="45">ь</key>
+        <key code="45">ъ</key>
+    </keys>
+
+    <keys>
+        <key code="45">ь</key>
+        <key code="37">ы</key>
+    </keys>
+
+    <keys>
+        <key code="47">с</key>
+        <key code="36">ш</key>
+        <key code="36">щ</key>
+    </keys>
+
+    <keys>
+        <key code="49">у</key>
+        <key code="49">ю</key>
+    </keys>
+
+    <keys>
+        <key code="53">ы</key>
+        <key code="29">я</key>
+    </keys>
+
+    <keys>
+        <key code="53">ы</key>
+        <key code="43">ё</key>
+    </keys>
+
+    <keys>
+        <key code="53">ы</key>
+        <key code="49">ю</key>
+    </keys>
+
+    <keys>
+        <key code="53">и</key>
+        <key code="33">є</key>
+    </keys>
+
+    <keys>
+        <key code="53">и</key>
+        <key code="37">ї</key>
+    </keys>
+
+    <keys>
+        <key code="54">з</key>
+        <key code="36">ж</key>
+    </keys>
+
+</keyboardLayout>

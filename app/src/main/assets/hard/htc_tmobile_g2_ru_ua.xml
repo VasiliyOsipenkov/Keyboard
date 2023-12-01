@@ -1,0 +1,68 @@
+<?xml version="1.0" encoding="utf-8"?>
+
+<keyboardLayout
+    layoutName="HTC T-Mobile G2 RU-UA"
+    layoutDescription=""
+    flagIcon="ru.androidteam.rukeyboard:drawable/ua_flag"
+
+    authorName="vovkab" authorEmail="vovkab@gmail.com" authorWebSite="http://androidteam.ru"
+    versionName="1.0"
+    versionCode="1"
+    >
+
+    <key code="77">ё</key>
+    <key code="45">й</key>
+    <key code="51">ц</key>
+    <key code="33">у</key>
+    <key code="46">к</key>
+    <key code="48">е</key>
+    <key code="53">н</key>
+    <key code="49">г</key>
+    <key code="29">ф</key>
+    <key code="32">в</key>
+    <key code="34">а</key>
+    <key code="35">п</key>
+    <key code="36">р</key>
+    <key code="38">о</key>
+    <key code="39">л</key>
+    <key code="54">я</key>
+    <key code="52">ч</key>
+    <key code="31">с</key>
+    <key code="50">м</key>
+    <key code="30">и</key>
+    <key code="42">т</key>
+    <key code="105">б</key>
+    <key code="73">ж</key>
+    <key code="43">з</key>
+
+    <keys>
+        <key code="71">ю</key>
+        <key code="71">э</key>
+    </keys>
+
+    <keys>
+        <key code="41">ь</key>
+        <key code="41">ъ</key>
+    </keys>
+
+    <keys>
+        <key code="37">ш</key>
+        <key code="37">щ</key>
+    </keys>
+
+    <keys>
+        <key code="47">ы</key>
+        <key code="47">і</key>
+    </keys>
+
+    <keys>
+        <key code="40">д</key>
+        <key code="40">є</key>
+    </keys>
+
+    <keys>
+        <key code="44">х</key>
+        <key code="44">ї</key>
+    </keys>
+
+</keyboardLayout>

@@ -1,0 +1,73 @@
+<?xml version="1.0" encoding="utf-8"?>
+
+<keyboardLayout
+    layoutName="SE X10 Mini Pro RU"
+    layoutDescription=""
+    flagIcon="ru.androidteam.rukeyboard:drawable/ru_flag"
+
+    authorName="vovkab" authorEmail="vovkab@gmail.com" authorWebSite="http://androidteam.ru"
+    versionName="1.0"
+    versionCode="1"
+    >
+
+    <!--  New layout example
+        <key code="29">
+            <default char="ф" />
+            <alt char="~" />
+            <shift char="Ф" />
+            <system char="a" />
+        </key>
+
+        <key code="56" char="э" system="\">
+        <altChar char="э" system="\" />
+        <shiftChar char="э" system="\" />
+    </key>
+    -->
+
+    <key code="95" isLangToggle="true" />
+
+    <key code="45">й</key>
+    <key code="51">ц</key>
+    <key code="33">у</key>
+    <key code="46">к</key>
+    <key code="48">е</key>
+    <key code="53">н</key>
+    <key code="49">г</key>
+    <key code="37">ш</key>
+
+    <key code="44">з</key>
+    <key code="29">ф</key>
+    <key code="47">ы</key>
+    <key code="32">в</key>
+    <key code="34">а</key>
+    <key code="35">п</key>
+    <key code="36">р</key>
+    <key code="38">о</key>
+    <key code="39" char="л" altChar="х" />
+    <key code="40" char="д" altChar="ъ" />
+    <key code="54">я</key>
+    <key code="52">ч</key>
+    <key code="31">с</key>
+    <key code="50">м</key>
+    <key code="30">и</key>
+    <key code="42">т</key>
+    <key code="41" char="б" />
+
+    <key code="55" char="ю">
+        <altChar char="ж" />
+    </key>
+
+    <key code="56" char="э">
+        <altChar char="ь" />
+    </key>
+
+    <keys>
+        <key code="43" char="щ">
+            <altChar char="+" system="+" />
+        </key>
+
+        <key code="43">
+            <altChar char="=" system="=" />
+        </key>
+    </keys>
+</keyboardLayout>

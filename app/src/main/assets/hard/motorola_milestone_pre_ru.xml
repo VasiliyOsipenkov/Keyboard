@@ -1,0 +1,80 @@
+<?xml version="1.0" encoding="utf-8"?>
+
+<keyboardLayout
+    layoutName="Motorola Milestone PRE RU"
+    layoutDescription=""
+    flagIcon="ru.androidteam.rukeyboard:drawable/ru_flag"
+
+    authorName="vovkab" authorEmail="vovkab@gmail.com" authorWebSite="http://androidteam.ru"
+    versionName="1.0"
+    versionCode="1"
+    >
+
+    <key code="92" isLangToggle="true" />
+
+    <key code="51">у</key>
+    <key code="33">к</key>
+    <key code="46">е</key>
+    <key code="48">н</key>
+    <key code="53">г</key>
+    <key code="49">ш</key>
+    <key code="37">щ</key>
+    <key code="43">з</key>
+    <key code="47">в</key>
+    <key code="32">а</key>
+    <key code="34">п</key>
+    <key code="35">р</key>
+    <key code="36">о</key>
+    <key code="38">л</key>
+    <key code="39">д</key>
+    <key code="40">ж</key>
+    <key code="72">э</key>
+    <key code="52">с</key>
+    <key code="31">м</key>
+    <key code="50">и</key>
+    <key code="30">т</key>
+    <key code="42">ь</key>
+    <key code="41">б</key>
+    <key code="77">ё</key>
+
+    <keys>
+        <key code="56">.</key>
+        <key code="56">,</key>
+    </keys>
+
+    <keys>
+        <key code="29">ф</key>
+        <key code="29">ы</key>
+    </keys>
+
+    <keys>
+        <key code="45">й</key>
+        <key code="45">ц</key>
+    </keys>
+
+    <keys>
+        <key code="44">х</key>
+        <key code="44">ъ</key>
+    </keys>
+
+    <keys>
+        <key code="72">ж</key>
+        <key code="72">э</key>
+    </keys>
+
+    <keys>
+        <key code="74">ж</key>
+        <key code="74">э</key>
+    </keys>
+
+    <keys>
+        <key code="54">я</key>
+        <key code="54">ч</key>
+    </keys>
+
+    <keys>
+        <key code="55">ю</key>
+        <key code="55">?</key>
+    </keys>
+
+</keyboardLayout>

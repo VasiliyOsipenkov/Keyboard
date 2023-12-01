@@ -1,0 +1,47 @@
+<?xml version="1.0" encoding="utf-8"?>
+
+<keyboardLayout
+    layoutName="Phonetic BG"
+    layoutDescription=""
+    flagIcon="ru.androidteam.rukeyboard:drawable/bg_flag"
+
+    authorName="zolern" authorEmail="entopalov@gmail.com" authorWebSite="http://"
+    versionName="1.0"
+    versionCode="1"
+    >
+
+    <key code="29">а</key>
+    <key code="30">б</key>
+    <key code="51">в</key>
+    <key code="35">г</key>
+    <key code="32">д</key>
+    <key code="33">е</key>
+    <key code="50">ж</key>
+    <key code="54">з</key>
+    <key code="37">и</key>
+    <key code="38">й</key>
+    <key code="39">к</key>
+    <key code="40">л</key>
+    <key code="41">м</key>
+    <key code="42">н</key>
+    <key code="43">о</key>
+    <key code="44">п</key>
+    <key code="46">р</key>
+    <key code="47">с</key>
+    <key code="48">т</key>
+    <key code="49">у</key>
+    <key code="34">ф</key>
+    <key code="36">х</key>
+    <key code="31">ц</key>
+    <key code="68">ч</key>
+    <key code="71">ш</key>
+    <key code="72">щ</key>
+    <key code="52">ь</key>
+    <key code="53">ъ</key>
+    <key code="73">ю</key>
+    <key code="45">я</key>
+
+    <key code="10" char="3" altChar="№" />
+    <key code="12" char="5" altChar="€" />
+
+</keyboardLayout>
