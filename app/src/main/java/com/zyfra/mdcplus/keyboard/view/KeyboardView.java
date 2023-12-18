@@ -22,13 +22,11 @@ import android.view.View;
 import android.view.ViewGroup;
 import android.widget.PopupWindow;
 import android.widget.TextView;
-
-import com.zyfra.mdcplus.keyboard.Api5;
-
 import java.util.Arrays;
 import java.util.HashMap;
 import java.util.List;
 import java.util.Map;
+import com.zyfra.mdcplus.keyboard.Api5;
 
 public class KeyboardView extends View implements View.OnClickListener {
     private static final boolean DEBUG = false;

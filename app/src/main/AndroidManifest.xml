@@ -23,12 +23,26 @@
         android:theme="@style/ApplicationTheme"
         tools:ignore="GoogleAppIndexingWarning"
         tools:targetApi="31">
-        <service android:name="SoftKeyboard" android:permission="android.permission.BIND_INPUT_METHOD">
+        <service android:name="SoftKeyboard" android:permission="android.permission.BIND_INPUT_METHOD"
+            android:exported="true">
             <intent-filter>
                 <action android:name="android.view.InputMethod"/>
             </intent-filter>
             <meta-data android:name="android.view.im" android:resource="@xml/method"/>
         </service>
+        <activity android:label="@string/russian_ime_settings" android:name=".KeyboardSettings"
+            android:exported="true">
+            <intent-filter>
+                <action android:name="android.intent.action.MAIN"/>
+                <category android:name="android.intent.category.INFO"/>
+            </intent-filter>
+        </activity>
+        <activity android:name=".ui.SoftKeyboardPreview" android:theme="@style/Theme.NoTitle"/>
+        <activity android:label="@string/key_layout_preview_title" android:name=".ui.HardKeyLayoutPreview"/>
+        <activity android:label="@string/how_to_activate" android:name=".ui.HowToActivate"/>
+        <activity android:label="@string/hardkeys_layout_title" android:name=".ui.HardKeyLayoutList"/>
+        <activity android:label="@string/pref_key_keyboard_test" android:name=".ui.KeyboardTestActivity"/>
+        <activity android:configChanges="keyboard|orientation" android:label="@string/lang_toggle_title" android:name=".ui.LangToggleListActivity" android:theme="@style/ThemeDialog"/>
     </application>
 
 </manifest>

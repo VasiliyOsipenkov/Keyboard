@@ -1,5 +1,29 @@
 package com.zyfra.mdcplus.keyboard;
 
+import android.content.Context;
+import android.content.Intent;
+import android.content.SharedPreferences;
+import android.content.pm.PackageInfo;
+import android.content.pm.PackageManager;
+import android.os.Bundle;
+import android.preference.EditTextPreference;
+import android.preference.ListPreference;
+import android.preference.Preference;
+import android.preference.PreferenceActivity;
+import android.preference.PreferenceScreen;
+import android.widget.Toast;
+import java.io.File;
+import java.io.IOException;
+import java.util.ArrayList;
+import java.util.Arrays;
+import com.zyfra.mdcplus.keyboard.model.KeyLayoutInfo;
+import com.zyfra.mdcplus.keyboard.ui.HardKeyLayoutList;
+import com.zyfra.mdcplus.keyboard.ui.HardKeyLayoutPreview;
+import com.zyfra.mdcplus.keyboard.ui.HowToActivate;
+import com.zyfra.mdcplus.keyboard.ui.KeyboardTestActivity;
+import com.zyfra.mdcplus.keyboard.ui.LangToggleListActivity;
+import com.zyfra.mdcplus.keyboard.ui.SoftKeyboardPreview;
+
 public class KeyboardSettings extends PreferenceActivity implements SharedPreferences.OnSharedPreferenceChangeListener {
     public static final String KEYBOARD_QWERTZ = "keyboard_qwertz";
 

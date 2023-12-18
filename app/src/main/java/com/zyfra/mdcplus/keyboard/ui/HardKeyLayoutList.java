@@ -1,6 +1,30 @@
 package com.zyfra.mdcplus.keyboard.ui;
 
 import android.app.ExpandableListActivity;
+import android.content.Context;
+import android.content.SharedPreferences;
+import android.os.Bundle;
+import android.preference.PreferenceManager;
+import android.util.Log;
+import android.util.SparseArray;
+import android.view.View;
+import android.view.ViewGroup;
+import android.widget.BaseExpandableListAdapter;
+import android.widget.CheckedTextView;
+import android.widget.ExpandableListAdapter;
+import android.widget.ExpandableListView;
+import android.widget.TextView;
+import java.io.File;
+import java.io.FileInputStream;
+import java.io.FileNotFoundException;
+import java.io.FileOutputStream;
+import java.io.FilenameFilter;
+import java.io.IOException;
+import java.util.ArrayList;
+import com.zyfra.mdcplus.keyboard.KeyboardSettings;
+import com.zyfra.mdcplus.keyboard.R;
+import com.zyfra.mdcplus.keyboard.XMLHelper;
+import com.zyfra.mdcplus.keyboard.model.KeyLayoutInfo;
 
 public class HardKeyLayoutList extends ExpandableListActivity {
     private static final boolean DEBUG = false;
@@ -32,7 +56,7 @@ public class HardKeyLayoutList extends ExpandableListActivity {
     private static void copyFile(Context paramContext, String paramString1, String paramString2) {
         try {
             FileInputStream fileInputStream = new FileInputStream(new File(paramString1));
-            FileOutputStream fileOutputStream = paramContext.openFileOutput(paramString2, 1);
+            FileOutputStream fileOutputStream = paramContext.openFileOutput(paramString2, 1);//ХЗ
             byte[] arrayOfByte = new byte[1024];
             while (true) {
                 int i = fileInputStream.read(arrayOfByte);
@@ -94,7 +118,7 @@ public class HardKeyLayoutList extends ExpandableListActivity {
             }
             bool1 = bool2;
             if (arrayList1.size() > 0) {
-                this.groups.append(0, getString(2131427427));
+                this.groups.append(0, getString(R.string.hard_layouts_in_data));
                 this.items.append(0, arrayList1);
                 bool1 = bool2;
             }
@@ -164,7 +188,7 @@ public class HardKeyLayoutList extends ExpandableListActivity {
             KeyLayoutInfo keyLayoutInfo = getChild(param1Int1, param1Int2);
             View view = param1View;
             if (param1View == null)
-                view = HardKeyLayoutList.this.getLayoutInflater().inflate(2130903053, null);
+                view = HardKeyLayoutList.this.getLayoutInflater().inflate(R.layout.simple_list_item_single_choice, null);
             CheckedTextView checkedTextView = (CheckedTextView)view;
             checkedTextView.setText(keyLayoutInfo.layoutName);
             checkedTextView.setChecked(keyLayoutInfo.isChecked);
@@ -192,7 +216,7 @@ public class HardKeyLayoutList extends ExpandableListActivity {
         public View getGroupView(int param1Int, boolean param1Boolean, View param1View, ViewGroup param1ViewGroup) {
             View view = param1View;
             if (param1View == null)
-                view = HardKeyLayoutList.this.getLayoutInflater().inflate(2130903046, null);
+                view = HardKeyLayoutList.this.getLayoutInflater().inflate(R.layout.item_hard_layout_group, null);
             ((TextView)view).setText(getGroup(param1Int).toString());
             return view;
         }

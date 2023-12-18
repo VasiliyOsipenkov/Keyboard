@@ -20,9 +20,10 @@ import android.widget.ImageView;
 import android.widget.ListAdapter;
 import android.widget.ListView;
 import android.widget.TextView;
-
 import java.util.ArrayList;
 import java.util.List;
+import com.zyfra.mdcplus.keyboard.LatinKeyboard;
+import com.zyfra.mdcplus.keyboard.LatinKeyboardView;
 
 public class SoftKeyboardPreview extends Activity {
     private ArrayList<String> activeKeyboards = new ArrayList<String>();

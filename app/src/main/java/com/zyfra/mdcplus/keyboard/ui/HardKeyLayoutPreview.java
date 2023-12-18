@@ -1,5 +1,31 @@
 package com.zyfra.mdcplus.keyboard.ui;
 
+import android.app.Activity;
+import android.content.Context;
+import android.content.SharedPreferences;
+import android.os.Bundle;
+import android.preference.PreferenceManager;
+import android.util.Log;
+import android.view.KeyCharacterMap;
+import android.view.LayoutInflater;
+import android.view.View;
+import android.view.ViewGroup;
+import android.widget.BaseAdapter;
+import android.widget.ListAdapter;
+import android.widget.ListView;
+import android.widget.TextView;
+import java.util.ArrayList;
+import java.util.Collections;
+import java.util.Comparator;
+import java.util.HashMap;
+import java.util.Iterator;
+import java.util.List;
+import java.util.Map;
+import org.xmlpull.v1.XmlPullParserException;
+import com.zyfra.mdcplus.keyboard.KeyLayoutLoader;
+import com.zyfra.mdcplus.keyboard.model.Key;
+import com.zyfra.mdcplus.keyboard.model.KeyboardLayout;
+
 public class HardKeyLayoutPreview extends Activity {
     private static final String TAG = HardKeyLayoutPreview.class.getSimpleName();
 
