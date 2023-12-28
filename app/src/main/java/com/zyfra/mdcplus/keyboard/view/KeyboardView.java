@@ -27,6 +27,7 @@ import java.util.HashMap;
 import java.util.List;
 import java.util.Map;
 import com.zyfra.mdcplus.keyboard.Api5;
+import com.zyfra.mdcplus.keyboard.R;
 
 public class KeyboardView extends View implements View.OnClickListener {
     private static final boolean DEBUG = false;
@@ -1136,8 +1137,8 @@ public class KeyboardView extends View implements View.OnClickListener {
             if (this.mMiniKeyboardContainer == null) {
                 Keyboard keyboard;
                 this.mMiniKeyboardContainer = ((LayoutInflater)getContext().getSystemService("layout_inflater")).inflate(this.mPopupLayout, null);
-                this.mMiniKeyboard = (KeyboardView)this.mMiniKeyboardContainer.findViewById(2131165216);
-                View view = this.mMiniKeyboardContainer.findViewById(2131165217);
+                this.mMiniKeyboard = (KeyboardView)this.mMiniKeyboardContainer.findViewById(R.id.keyboardView);
+                View view = this.mMiniKeyboardContainer.findViewById(R.id.closeButton);
                 if (view != null)
                     view.setOnClickListener(this);
                 this.mMiniKeyboard.setOnKeyboardActionListener(new OnKeyboardActionListener() {
@@ -1177,7 +1178,7 @@ public class KeyboardView extends View implements View.OnClickListener {
                 this.mMiniKeyboardContainer.measure(View.MeasureSpec.makeMeasureSpec(getWidth(), -2147483648), View.MeasureSpec.makeMeasureSpec(getHeight(), -2147483648));
                 this.mMiniKeyboardCache.put(paramKey, this.mMiniKeyboardContainer);
             } else {
-                this.mMiniKeyboard = (KeyboardView)this.mMiniKeyboardContainer.findViewById(2131165216);
+                this.mMiniKeyboard = (KeyboardView)this.mMiniKeyboardContainer.findViewById(R.id.keyboardView);
             }
             if (this.mWindowOffset == null) {
                 this.mWindowOffset = new int[2];

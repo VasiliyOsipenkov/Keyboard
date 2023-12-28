@@ -78,10 +78,10 @@ public class KeyboardSettings extends PreferenceActivity implements SharedPrefer
     private SharedPreferences mSettings;
 
     public static String getDefaultHardLayout(Context paramContext, SharedPreferences paramSharedPreferences) {
-        String str = paramSharedPreferences.getString("pref_hard_layout", paramContext.getString(2131427328));
+        String str = paramSharedPreferences.getString("pref_hard_layout", paramContext.getString(R.string.default_hard_keyboard));
         boolean bool = false;
         if (str.startsWith("/")) {
-            File file = new File("/data/data/ru.androidteam.rukeyboard/files/current.xml");
+            File file = new File("/data/data/com.zyfra.mdcplus.keyboard/files/current.xml");
             if (file.exists() && file.isFile())
                 return file.getAbsolutePath();
             file = new File(str);
@@ -93,16 +93,16 @@ public class KeyboardSettings extends PreferenceActivity implements SharedPrefer
                 if (!bool1)
                     bool = true;
                 if (bool) {
-                    String str1 = paramContext.getString(2131427328);
-                    Toast.makeText(paramContext, String.format(paramContext.getString(2131427428), new Object[] { str }), 1).show();
+                    String str1 = paramContext.getString(R.string.default_hard_keyboard);
+                    Toast.makeText(paramContext, String.format(paramContext.getString(R.string.hard_layout_cant_be_found), new Object[] { str }), 1).show();
                     paramSharedPreferences.edit().putString("pref_hard_layout", str1).commit();
                     return str1;
                 }
             } catch (IOException iOException) {
                 iOException.printStackTrace();
                 if (bool) {
-                    String str1 = paramContext.getString(2131427328);
-                    Toast.makeText(paramContext, String.format(paramContext.getString(2131427428), new Object[] { str }), 1).show();
+                    String str1 = paramContext.getString(R.string.default_hard_keyboard);
+                    Toast.makeText(paramContext, String.format(paramContext.getString(R.string.hard_layout_cant_be_found), new Object[] { str }), 1).show();
                     paramSharedPreferences.edit().putString("pref_hard_layout", str1).commit();
                     return str1;
                 }
@@ -110,8 +110,8 @@ public class KeyboardSettings extends PreferenceActivity implements SharedPrefer
             return str;
         }
         if (bool) {
-            String str1 = paramContext.getString(2131427328);
-            Toast.makeText(paramContext, String.format(paramContext.getString(2131427428), new Object[] { str }), 1).show();
+            String str1 = paramContext.getString(R.string.default_hard_keyboard);
+            Toast.makeText(paramContext, String.format(paramContext.getString(R.string.hard_layout_cant_be_found), new Object[] { str }), 1).show();
             paramSharedPreferences.edit().putString("pref_hard_layout", str1).commit();
             return str1;
         }
@@ -119,7 +119,7 @@ public class KeyboardSettings extends PreferenceActivity implements SharedPrefer
 
     private void updateDelayTimeSummary() {
         if (this.delayTimeList != null)
-            this.delayTimeList.setSummary(this.delayTimeList.getEntry() + ");
+            this.delayTimeList.setSummary(this.delayTimeList.getEntry() + "мс");
     }
 
     private void updateExternalPathSummary() {
@@ -169,11 +169,11 @@ public class KeyboardSettings extends PreferenceActivity implements SharedPrefer
     private void updateLangToggleSummary() {
         String str;
         if (this.mLangToggle != null) {
-            str = getString(2131427330);
+            str = getString(R.string.default_lang_toggle);
             str = this.mSettings.getString("key_lang_toggle", str);
             if (str.equals("custom")) {
                 int k = this.mSettings.getInt("key_lang_toggle_custom", -1);
-                this.mLangToggle.setSummary(getString(2131427429) + " : " + k);
+                this.mLangToggle.setSummary(getString(R.string.lang_toggle_my_keycode) + " : " + k);
                 return;
             }
         } else {
@@ -196,7 +196,7 @@ public class KeyboardSettings extends PreferenceActivity implements SharedPrefer
 
     protected void onCreate(Bundle paramBundle) {
         super.onCreate(paramBundle);
-        addPreferencesFromResource(2130968589);
+        addPreferencesFromResource(R.xml.prefs);
         PackageManager packageManager = getPackageManager();
         PreferenceScreen preferenceScreen = getPreferenceScreen();
         this.mSettings = getPreferenceScreen().getSharedPreferences();
@@ -204,7 +204,7 @@ public class KeyboardSettings extends PreferenceActivity implements SharedPrefer
         if (this.edtPrefVersion != null)
             try {
                 PackageInfo packageInfo = packageManager.getPackageInfo(getPackageName(), 0);
-                String str = getString(2131427332) + " " + packageInfo.versionName;
+                String str = getString(R.string.version) + " " + packageInfo.versionName;
                 this.edtPrefVersion.setTitle(str);
             } catch (Exception exception) {
                 exception.printStackTrace();
@@ -254,8 +254,8 @@ public class KeyboardSettings extends PreferenceActivity implements SharedPrefer
             });
         this.editPrefExternalPath = (EditTextPreference)preferenceScreen.findPreference("key_external_layout_path");
         updateExternalPathSummary();
-        this.mLangToggleEntries.addAll(Arrays.asList(getResources().getStringArray(2131099655)));
-        this.mLangToggleValues.addAll(Arrays.asList(getResources().getStringArray(2131099656)));
+        this.mLangToggleEntries.addAll(Arrays.asList(getResources().getStringArray(R.array.lang_toggle_entries)));
+        this.mLangToggleValues.addAll(Arrays.asList(getResources().getStringArray(R.array.lang_toggle_values)));
         this.mLangToggle = preferenceScreen.findPreference("key_lang_toggle");
         if (this.mLangToggle != null)
             this.mLangToggle.setOnPreferenceClickListener(new Preference.OnPreferenceClickListener() {

@@ -24,6 +24,7 @@ import java.util.ArrayList;
 import java.util.List;
 import com.zyfra.mdcplus.keyboard.LatinKeyboard;
 import com.zyfra.mdcplus.keyboard.LatinKeyboardView;
+import com.zyfra.mdcplus.keyboard.R;
 
 public class SoftKeyboardPreview extends Activity {
     private ArrayList<String> activeKeyboards = new ArrayList<String>();
@@ -45,23 +46,23 @@ public class SoftKeyboardPreview extends Activity {
 
     private ListView lvSoftKeyboards;
 
-    private final String packagename = "ru.androidteam.rukeyboard";
+    private final String packagename = "com.zyfra.mdcplus.keyboard";
 
     private Resources r;
 
     private SharedPreferences settings;
 
     private void createKeyboardsList() {
-        String[] arrayOfString1 = this.r.getStringArray(2131099648);
-        String[] arrayOfString2 = this.r.getStringArray(2131099649);
-        String[] arrayOfString3 = this.r.getStringArray(2131099650);
+        String[] arrayOfString1 = this.r.getStringArray(R.array.softkeys_names);
+        String[] arrayOfString2 = this.r.getStringArray(R.array.softkeys_xmlnames);
+        String[] arrayOfString3 = this.r.getStringArray(R.array.softkeys_flags);
         int j = arrayOfString1.length;
         for (int i = 0; i < j; i++)
             this.keyboardsList.add(new SoftKeyboardLayout(arrayOfString1[i], arrayOfString2[i], arrayOfString3[i]));
     }
 
     void loadActiveKeyboardList() {
-        String[] arrayOfString = this.settings.getString("key_softkeyboard_list", getString(2131427329)).split(" ");
+        String[] arrayOfString = this.settings.getString("key_softkeyboard_list", getString(R.string.default_soft_keyboard)).split(" ");
         this.activeKeyboards.clear();
         int j = arrayOfString.length;
         for (int i = 0; i < j; i++) {
@@ -72,10 +73,10 @@ public class SoftKeyboardPreview extends Activity {
 
     protected void onCreate(Bundle paramBundle) {
         super.onCreate(paramBundle);
-        setContentView(2130903044);
+        setContentView(R.layout.activity_soft_layout_preview);
         this.r = getResources();
         this.settings = PreferenceManager.getDefaultSharedPreferences((Context)this);
-        this.keyboardView = (LatinKeyboardView)findViewById(2131165208);
+        this.keyboardView = (LatinKeyboardView)findViewById(R.id.keyboardPreview);
         this.keyboardView.setOnClickListener(null);
         this.keyboardView.setOnTouchListener(new View.OnTouchListener() {
             public boolean onTouch(View param1View, MotionEvent param1MotionEvent) {
@@ -85,7 +86,7 @@ public class SoftKeyboardPreview extends Activity {
         loadActiveKeyboardList();
         createKeyboardsList();
         this.adapter = new KeyAdapter((Context)this, this.keyboardsList);
-        this.lvSoftKeyboards = (ListView)findViewById(2131165207);
+        this.lvSoftKeyboards = (ListView)findViewById(R.id.lvSoftKeyboards);
         this.lvSoftKeyboards.setAdapter((ListAdapter)this.adapter);
         this.lvSoftKeyboards.setOnItemClickListener(this.adapter);
         this.lvSoftKeyboards.setOnItemSelectedListener(new AdapterView.OnItemSelectedListener() {
@@ -149,16 +150,16 @@ public class SoftKeyboardPreview extends Activity {
 
         public View getView(int param1Int, View param1View, ViewGroup param1ViewGroup) {
             if (param1View == null) {
-                param1View = this.mInflater.inflate(2130903048, null);
+                param1View = this.mInflater.inflate(R.layout.item_soft_layout_preview, null);
                 SoftKeyboardPreview.ViewHolder viewHolder1 = new SoftKeyboardPreview.ViewHolder();
-                viewHolder1.name = (TextView)param1View.findViewById(2131165188);
-                viewHolder1.checked = (CheckBox)param1View.findViewById(2131165214);
+                viewHolder1.name = (TextView)param1View.findViewById(R.id.tvName);
+                viewHolder1.checked = (CheckBox)param1View.findViewById(R.id.cbItem);
                 viewHolder1.checked.setOnCheckedChangeListener(new CompoundButton.OnCheckedChangeListener() {
                     public void onCheckedChanged(CompoundButton param2CompoundButton, boolean param2Boolean) {
                         (SoftKeyboardPreview.KeyAdapter.this.getItem(((Integer)param2CompoundButton.getTag()).intValue())).checked = param2Boolean;
                     }
                 });
-                viewHolder1.flag = (ImageView)param1View.findViewById(2131165215);
+                viewHolder1.flag = (ImageView)param1View.findViewById(R.id.ivFlag);
                 param1View.setTag(viewHolder1);
                 viewHolder1.checked.setTag(Integer.valueOf(param1Int));
                 SoftKeyboardPreview.SoftKeyboardLayout softKeyboardLayout1 = this.mList.get(param1Int);
@@ -206,8 +207,8 @@ public class SoftKeyboardPreview extends Activity {
 
         SoftKeyboardLayout(String param1String1, String param1String2, String param1String3) {
             this(param1String1, param1String2, false);
-            this.xmlRes = SoftKeyboardPreview.this.r.getIdentifier(param1String2, "xml", "ru.androidteam.rukeyboard");//fix
-            this.icon = SoftKeyboardPreview.this.r.getDrawable(SoftKeyboardPreview.this.r.getIdentifier(param1String3, "drawable", "ru.androidteam.rukeyboard"));//fix
+            this.xmlRes = SoftKeyboardPreview.this.r.getIdentifier(param1String2, "xml", "com.zyfra.mdcplus.keyboard");//fix
+            this.icon = SoftKeyboardPreview.this.r.getDrawable(SoftKeyboardPreview.this.r.getIdentifier(param1String3, "drawable", "com.zyfra.mdcplus.keyboard"));//fix
             if (SoftKeyboardPreview.this.activeKeyboards.contains(param1String2))
                 this.checked = true;
         }

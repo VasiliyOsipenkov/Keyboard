@@ -10,6 +10,8 @@ import android.widget.CompoundButton;
 import android.widget.EditText;
 import android.widget.TextView;
 
+import com.zyfra.mdcplus.keyboard.R;
+
 public class KeyboardTestActivity extends Activity {
     private View codeTitleView;
 
@@ -35,12 +37,12 @@ public class KeyboardTestActivity extends Activity {
 
     public void onCreate(Bundle paramBundle) {
         super.onCreate(paramBundle);
-        setContentView(2130903042);//xml
-        this.codeView = (TextView)findViewById(2131165198);//xml
-        this.codeTitleView = findViewById(2131165196);//xml
-        this.scanCodeView = (TextView)findViewById(2131165197);//xml
-        this.scanCodeTitleView = findViewById(2131165195);//xml
-        this.showScanCodeView = (CheckBox)findViewById(2131165194);//xml
+        setContentView(R.layout.activity_keyboard_test);
+        this.codeView = (TextView)findViewById(R.id.code);
+        this.codeTitleView = findViewById(R.id.codeTitle);
+        this.scanCodeView = (TextView)findViewById(R.id.scanCode);
+        this.scanCodeTitleView = findViewById(R.id.scanCodeTitle);
+        this.showScanCodeView = (CheckBox)findViewById(R.id.showScanCode);
         this.showScanCodeView.setOnCheckedChangeListener(new CompoundButton.OnCheckedChangeListener() {
             public void onCheckedChanged(CompoundButton param1CompoundButton, boolean param1Boolean) {
                 byte b;
@@ -61,7 +63,7 @@ public class KeyboardTestActivity extends Activity {
                 view.setVisibility(b);
             }
         });
-        this.inputView = (EditText)findViewById(2131165201);//xml
+        this.inputView = (EditText)findViewById(R.id.input);
         this.inputView.setOnKeyListener(new View.OnKeyListener() {
             public boolean onKey(View param1View, int param1Int, KeyEvent param1KeyEvent) {
                 KeyboardTestActivity.this.updateViews(param1KeyEvent);
@@ -69,8 +71,8 @@ public class KeyboardTestActivity extends Activity {
             }
         });
         this.inputView.requestFocus();
-        this.metaInfoView = (TextView)findViewById(2131165200);//xml
-        this.deviceInfoView = (TextView)findViewById(2131165199);//xml
+        this.metaInfoView = (TextView)findViewById(R.id.meta_info);//xml
+        this.deviceInfoView = (TextView)findViewById(R.id.device_info);//xml
         this.deviceInfoView.append("board: " + Build.BOARD);
         this.deviceInfoView.append("\n");
         this.deviceInfoView.append("product: " + Build.PRODUCT);

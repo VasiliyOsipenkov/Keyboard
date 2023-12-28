@@ -23,6 +23,7 @@ import java.util.List;
 import java.util.Map;
 import org.xmlpull.v1.XmlPullParserException;
 import com.zyfra.mdcplus.keyboard.KeyLayoutLoader;
+import com.zyfra.mdcplus.keyboard.R;
 import com.zyfra.mdcplus.keyboard.model.Key;
 import com.zyfra.mdcplus.keyboard.model.KeyboardLayout;
 
@@ -38,7 +39,7 @@ public class HardKeyLayoutPreview extends Activity {
     private ArrayList<KeyData> keysList = new ArrayList<KeyData>();
 
     View.OnClickListener listener = new View.OnClickListener() {
-        public void onClick(View param1View) {
+        public void onClick(View param1View) {//Люто, вычислить нужные строки
             switch (param1View.getId()) {
                 default:
                     return;
@@ -117,11 +118,11 @@ public class HardKeyLayoutPreview extends Activity {
     }
 
     protected void onCreate(Bundle paramBundle) {
-        KeyboardLayout keyboardLayout;
+        KeyboardLayout keyboardLayout = null;
         super.onCreate(paramBundle);
-        setContentView(2130903041);
+        setContentView(R.layout.activity_key_layout_preview);
         this.settings = PreferenceManager.getDefaultSharedPreferences((Context)this);
-        String str = this.settings.getString("pref_hard_layout", getString(2131427328));
+        String str = this.settings.getString("pref_hard_layout", getString(R.string.default_hard_keyboard));
         paramBundle = null;
         try {
             KeyboardLayout keyboardLayout1 = (new KeyLayoutLoader((Context)this)).load(str);
@@ -143,11 +144,11 @@ public class HardKeyLayoutPreview extends Activity {
         loadLayoutList(keyboardLayout.keysMap, "", "");
         this.adapter = new KeyAdapter((Context)this, this.keysList);
         this.adapter.sort(this.sKeyComparator);
-        this.lvLayout = (ListView)findViewById(2131165193);
+        this.lvLayout = (ListView)findViewById(R.id.lvLayout);
         this.lvLayout.setAdapter((ListAdapter)this.adapter);
-        findViewById(2131165190).setOnClickListener(this.listener);
-        findViewById(2131165191).setOnClickListener(this.listener);
-        findViewById(2131165192).setOnClickListener(this.listener);
+        findViewById(R.id.tvSortSym).setOnClickListener(this.listener);
+        findViewById(R.id.tvSortEng).setOnClickListener(this.listener);
+        findViewById(R.id.tvSortCode).setOnClickListener(this.listener);
     }
 
     private class KeyAdapter extends BaseAdapter {
@@ -175,11 +176,11 @@ public class HardKeyLayoutPreview extends Activity {
         public View getView(int param1Int, View param1View, ViewGroup param1ViewGroup) {
             View view = param1View;
             if (param1View == null) {
-                view = this.mInflater.inflate(2130903047, null);
+                view = this.mInflater.inflate(R.layout.item_key_layout_preview, null);
                 HardKeyLayoutPreview.ViewHolder viewHolder1 = new HardKeyLayoutPreview.ViewHolder();
-                viewHolder1.symbol = (TextView)view.findViewById(2131165211);
-                viewHolder1.symbolEng = (TextView)view.findViewById(2131165212);
-                viewHolder1.code = (TextView)view.findViewById(2131165213);
+                viewHolder1.symbol = (TextView)view.findViewById(R.id.tvSymbol);
+                viewHolder1.symbolEng = (TextView)view.findViewById(R.id.tvSymbolEng);
+                viewHolder1.code = (TextView)view.findViewById(R.id.tvCode);
                 view.setTag(viewHolder1);
             }
             HardKeyLayoutPreview.ViewHolder viewHolder = (HardKeyLayoutPreview.ViewHolder)view.getTag();

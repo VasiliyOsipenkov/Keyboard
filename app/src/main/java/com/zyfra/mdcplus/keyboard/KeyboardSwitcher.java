@@ -16,13 +16,13 @@ import java.util.Map;
 public class KeyboardSwitcher {
     private static boolean DEBUG = false;
 
-    public static final int KEYBOARDMODE_EMAIL = 2131165225;
+    public static final int KEYBOARDMODE_EMAIL = R.id.mode_email;
 
-    public static final int KEYBOARDMODE_IM = 2131165226;
+    public static final int KEYBOARDMODE_IM = R.id.mode_im;
 
-    public static final int KEYBOARDMODE_NORMAL = 2131165223;
+    public static final int KEYBOARDMODE_NORMAL = R.id.mode_normal;
 
-    public static final int KEYBOARDMODE_URL = 2131165224;
+    public static final int KEYBOARDMODE_URL = R.id.mode_url;
 
     public static final int MODE_EMAIL = 5;
 
@@ -86,7 +86,7 @@ public class KeyboardSwitcher {
 
     private int mTextMode = 0;
 
-    private final String packagename = "ru.androidteam.rukeyboard";
+    private final String packagename = "com.zyfra.mdcplus.keyboard";
 
     private SharedPreferences settings;
 
@@ -97,8 +97,8 @@ public class KeyboardSwitcher {
     KeyboardSwitcher(SoftKeyboard paramSoftKeyboard) {
         this.mContext = paramSoftKeyboard;
         this.mKeyboards = new HashMap<KeyboardId, LatinKeyboard>();
-        this.mSymbolsId = new KeyboardId(2130968582);
-        this.mSymbolsShiftedId = new KeyboardId(2130968583);
+        this.mSymbolsId = new KeyboardId(R.xml.kbd_symbols);
+        this.mSymbolsShiftedId = new KeyboardId(R.xml.kbd_symbols_shift);
         this.textKeyboards = new ArrayList<KeyboardXML>();
         this.mNotificationManager = (NotificationManager)paramSoftKeyboard.getSystemService("notification");
         this.settings = PreferenceManager.getDefaultSharedPreferences((Context)paramSoftKeyboard);
@@ -121,31 +121,31 @@ public class KeyboardSwitcher {
 
     private KeyboardId getKeyboardId(int paramInt1, int paramInt2, int paramInt3, boolean paramBoolean) {
         if (paramBoolean)
-            return (paramInt2 == 3) ? new KeyboardId(2130968579) : new KeyboardId(2130968582);
+            return (paramInt2 == 3) ? new KeyboardId(R.xml.kbd_phone_symbols) : new KeyboardId(R.xml.kbd_symbols);
         switch (paramInt2) {
             default:
                 return null;
             case 1:
                 if (this.mTextMode == 0)
-                    return new KeyboardId(paramInt1, 2131165223, true);
+                    return new KeyboardId(paramInt1, R.id.mode_normal, true);
                 if (this.mTextMode == 1)
-                    return new KeyboardId(2130968577, 2131165223, true);
+                    return new KeyboardId(R.xml.kbd_alpha, R.id.mode_normal, true);
             case 2:
-                return new KeyboardId(2130968582);
+                return new KeyboardId(R.xml.kbd_symbols);
             case 3:
-                return new KeyboardId(2130968578);
+                return new KeyboardId(R.xml.kbd_phone);
             case 4:
-                return new KeyboardId(paramInt1, 2131165224, true);
+                return new KeyboardId(paramInt1, R.id.mode_url, true);
             case 5:
-                return new KeyboardId(paramInt1, 2131165225, true);
+                return new KeyboardId(paramInt1, R.id.mode_email, true);
             case 6:
                 break;
         }
-        return new KeyboardId(paramInt1, 2131165226, true);
+        return new KeyboardId(paramInt1, R.id.mode_im, true);
     }
 
     private KeyboardId getKeyboardId(int paramInt1, int paramInt2, boolean paramBoolean) {
-        return getKeyboardId(2130968581, paramInt1, paramInt2, paramBoolean);
+        return getKeyboardId(R.xml.kbd_qwerty, paramInt1, paramInt2, paramBoolean);
     }
 
     private int getNextKeyboardID() {
@@ -173,7 +173,7 @@ public class KeyboardSwitcher {
 
     boolean isAlphabetMode() {
         KeyboardId keyboardId = this.mCurrentId;
-        return (keyboardId.mMode == 2131165223 || keyboardId.mMode == 2131165224 || keyboardId.mMode == 2131165225 || keyboardId.mMode == 2131165226);
+        return (keyboardId.mMode == R.id.mode_normal || keyboardId.mMode == R.id.mode_url || keyboardId.mMode == R.id.mode_email || keyboardId.mMode == R.id.mode_im);
     }
 
     boolean isTextMode() {
@@ -184,16 +184,16 @@ public class KeyboardSwitcher {
         if (DEBUG)
             Log.d(TAG, "loadActiveKeyboardList");
         this.textKeyboards.clear();
-        this.textKeyboards.add(new KeyboardXML(2130968581, 2130837560));
+        this.textKeyboards.add(new KeyboardXML(R.xml.kbd_qwerty, R.drawable.us_flag));
         Resources resources = this.mContext.getResources();
-        String str = this.settings.getString("key_softkeyboard_list", this.mContext.getString(2131427329));
-        String[] arrayOfString1 = resources.getStringArray(2131099649);
-        String[] arrayOfString2 = resources.getStringArray(2131099650);
+        String str = this.settings.getString("key_softkeyboard_list", this.mContext.getString(R.string.default_soft_keyboard));
+        String[] arrayOfString1 = resources.getStringArray(R.array.softkeys_xmlnames);
+        String[] arrayOfString2 = resources.getStringArray(R.array.softkeys_flags);
         int j = arrayOfString1.length;
         for (int i = 0; i < j; i++) {
             if (str.contains(arrayOfString1[i])) {
-                int k = resources.getIdentifier(arrayOfString1[i], "xml", "ru.androidteam.rukeyboard");
-                int m = resources.getIdentifier(arrayOfString2[i], "drawable", "ru.androidteam.rukeyboard");
+                int k = resources.getIdentifier(arrayOfString1[i], "xml", "com.zyfra.mdcplus.keyboard");
+                int m = resources.getIdentifier(arrayOfString2[i], "drawable", "com.zyfra.mdcplus.keyboard");
                 this.textKeyboards.add(new KeyboardXML(k, m));
             }
         }
@@ -209,8 +209,8 @@ public class KeyboardSwitcher {
         this.mLastDisplayWidth = i;
         if (!paramBoolean)
             this.mKeyboards.clear();
-        this.mSymbolsId = new KeyboardId(2130968582);
-        this.mSymbolsShiftedId = new KeyboardId(2130968583);
+        this.mSymbolsId = new KeyboardId(R.xml.kbd_symbols);
+        this.mSymbolsShiftedId = new KeyboardId(R.xml.kbd_symbols_shift);
     }
 
     boolean onKey(int paramInt) {
@@ -235,9 +235,9 @@ public class KeyboardSwitcher {
         if (this.showFlag) {
             Notification notification = new Notification(paramInt, null, System.currentTimeMillis());
             Intent intent = new Intent();
-            intent.setClassName("ru.androidteam.rukeyboard", "ru.androidteam.rukeyboard.KeyboardSettings");
+            intent.setClassName("com.zyfra.mdcplus.keyboard", "com.zyfra.mdcplus.keyboard.KeyboardSettings");
             PendingIntent pendingIntent = PendingIntent.getActivity((Context)this.mContext, 0, intent, 0);
-            notification.setLatestEventInfo((Context)this.mContext, "Android", ", pendingIntent);
+            notification.setLatestEventInfo((Context)this.mContext, "Клавиатура для Android", "Открыть настройки", pendingIntent);
                     notification.flags |= 0x2;
             this.mNotificationManager.notify(1, notification);
             return;

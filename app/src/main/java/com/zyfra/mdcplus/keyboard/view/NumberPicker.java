@@ -13,6 +13,8 @@ import android.widget.EditText;
 import android.widget.LinearLayout;
 import android.widget.TextView;
 
+import com.zyfra.mdcplus.keyboard.R;
+
 public class NumberPicker extends LinearLayout {
     private static final char[] DIGIT_CHARACTERS;
 
@@ -87,18 +89,18 @@ public class NumberPicker extends LinearLayout {
     public NumberPicker(Context paramContext, AttributeSet paramAttributeSet) {
         super(paramContext, paramAttributeSet);
         setOrientation(1);
-        ((LayoutInflater)paramContext.getSystemService("layout_inflater")).inflate(2130903051, (ViewGroup)this, true);
+        ((LayoutInflater)paramContext.getSystemService("layout_inflater")).inflate(R.layout.number_picker, (ViewGroup)this, true);
         this.mHandler = new Handler();
         View.OnClickListener onClickListener = new View.OnClickListener() {
             public void onClick(View param1View) {
                 NumberPicker.this.validateInput((View)NumberPicker.this.mText);
                 if (!NumberPicker.this.mText.hasFocus())
                     NumberPicker.this.mText.requestFocus();
-                if (2131165218 == param1View.getId()) {
+                if (R.id.increment == param1View.getId()) {
                     NumberPicker.this.changeCurrent(NumberPicker.this.mCurrent + 1);
                     return;
                 }
-                if (2131165220 == param1View.getId()) {
+                if (R.id.decrement == param1View.getId()) {
                     NumberPicker.this.changeCurrent(NumberPicker.this.mCurrent - 1);
                     return;
                 }
@@ -113,12 +115,12 @@ public class NumberPicker extends LinearLayout {
         View.OnLongClickListener onLongClickListener = new View.OnLongClickListener() {
             public boolean onLongClick(View param1View) {
                 NumberPicker.this.mText.clearFocus();
-                if (2131165218 == param1View.getId()) {
+                if (R.id.increment == param1View.getId()) {
                     NumberPicker.access$002(NumberPicker.this, true);
                     NumberPicker.this.mHandler.post(NumberPicker.this.mRunnable);
                     return true;
                 }
-                if (2131165220 == param1View.getId()) {
+                if (R.id.decrement == param1View.getId()) {
                     NumberPicker.access$402(NumberPicker.this, true);
                     NumberPicker.this.mHandler.post(NumberPicker.this.mRunnable);
                     return true;
@@ -128,15 +130,15 @@ public class NumberPicker extends LinearLayout {
         };
         NumberPickerInputFilter numberPickerInputFilter = new NumberPickerInputFilter();
         this.mNumberInputFilter = (InputFilter)new NumberRangeKeyListener();
-        this.mIncrementButton = (NumberPickerButton)findViewById(2131165218);
+        this.mIncrementButton = (NumberPickerButton)findViewById(R.id.increment);
         this.mIncrementButton.setOnClickListener(onClickListener);
         this.mIncrementButton.setOnLongClickListener(onLongClickListener);
         this.mIncrementButton.setNumberPicker(this);
-        this.mDecrementButton = (NumberPickerButton)findViewById(2131165220);
+        this.mDecrementButton = (NumberPickerButton)findViewById(R.id.decrement);
         this.mDecrementButton.setOnClickListener(onClickListener);
         this.mDecrementButton.setOnLongClickListener(onLongClickListener);
         this.mDecrementButton.setNumberPicker(this);
-        this.mText = (EditText)findViewById(2131165219);
+        this.mText = (EditText)findViewById(R.id.timepicker_input);
         this.mText.setOnFocusChangeListener(onFocusChangeListener);
         this.mText.setFilters(new InputFilter[] { numberPickerInputFilter });
         this.mText.setRawInputType(2);

@@ -180,7 +180,7 @@ public class SoftKeyboard extends InputMethodService implements KeyboardView.OnK
                 return;
             }
             if (param1String.equals("pref_vibrate_time")) {
-                int i = SoftKeyboard.this.getResources().getInteger(2131296256);
+                int i = SoftKeyboard.this.getResources().getInteger(R.integer.vibrate_duration_ms);
                 SoftKeyboard.access$502(SoftKeyboard.this, param1SharedPreferences.getInt(param1String, i));
                 return;
             }
@@ -239,7 +239,7 @@ public class SoftKeyboard extends InputMethodService implements KeyboardView.OnK
         if (this.mIsTranslitKeys) {
             i = this.hardIcon;
         } else {
-            i = 2130837560;
+            i = R.drawable.us_flag;
         }
         keyboardSwitcher.setKeyboardFlag(i);
         InputConnection inputConnection = getCurrentInputConnection();
@@ -379,7 +379,7 @@ public class SoftKeyboard extends InputMethodService implements KeyboardView.OnK
     }
 
     private void loadLangToggleSettings() {
-        String str = getString(2131427330);
+        String str = getString(R.string.default_lang_toggle);
         str = this.settings.getString("key_lang_toggle", str);
         if (str.equals("alt_shift")) {
             this.langToggle = LANG_TOGGLE.ALT_SHIFT;
@@ -404,7 +404,7 @@ public class SoftKeyboard extends InputMethodService implements KeyboardView.OnK
     private void loadSettings() {
         this.settings = PreferenceManager.getDefaultSharedPreferences((Context)this);
         this.mVibrateOn = this.settings.getBoolean("vibrate_on", true);
-        int i = getResources().getInteger(2131296256);
+        int i = getResources().getInteger(R.integer.vibrate_duration_ms;
         this.mVibrateDuration = this.settings.getInt("pref_vibrate_time", i);
         this.mSoundOn = this.settings.getBoolean("sound_on", false);
         this.mAutoCapSoft = this.settings.getBoolean("auto_cap_soft", true);
@@ -421,7 +421,7 @@ public class SoftKeyboard extends InputMethodService implements KeyboardView.OnK
 
     private void loadSimpleSettings() {
         this.mKeyDelay = this.settings.getBoolean("key_delay", true);
-        this.mKeyDelayTime = Integer.valueOf(this.settings.getString("key_delay_time", getString(2131427377))).intValue();
+        this.mKeyDelayTime = Integer.valueOf(this.settings.getString("key_delay_time", getString(R.string.delay_default_value))).intValue();
     }
 
     private void playKeyClick(int paramInt) {
@@ -543,10 +543,10 @@ public class SoftKeyboard extends InputMethodService implements KeyboardView.OnK
     private void showOptionsMenu() {
         AlertDialog.Builder builder = new AlertDialog.Builder((Context)this);
         builder.setCancelable(true);
-        builder.setIcon(2130837516);
-        builder.setNegativeButton(2131427342, null);
-        String str1 = getString(2131427345);
-        String str2 = getString(2131427346);
+        builder.setIcon(R.drawable.ic_dialog_keyboard);
+        builder.setNegativeButton(R.string.cancel, null);
+        String str1 = getString(R.string.russian_ime_settings);
+        String str2 = getString(R.string.ime_settings);
         DialogInterface.OnClickListener onClickListener = new DialogInterface.OnClickListener() {
             public void onClick(DialogInterface param1DialogInterface, int param1Int) {
                 param1DialogInterface.dismiss();
@@ -563,7 +563,7 @@ public class SoftKeyboard extends InputMethodService implements KeyboardView.OnK
             }
         };
         builder.setItems(new CharSequence[] { str1, str2 }, onClickListener);
-        builder.setTitle(getResources().getString(2131427331));
+        builder.setTitle(getResources().getString(R.string.ime_name));
         this.mOptionsDialog = builder.create();
         Window window = this.mOptionsDialog.getWindow();
         WindowManager.LayoutParams layoutParams = window.getAttributes();
@@ -824,7 +824,7 @@ public class SoftKeyboard extends InputMethodService implements KeyboardView.OnK
         super.onCreate();
         this.curConfig = getResources().getConfiguration();
         this.mKeyboardSwitcher = new KeyboardSwitcher(this);
-        this.mWordSeparators = getResources().getString(2131427333);
+        this.mWordSeparators = getResources().getString(R.string.word_separators);
         IntentFilter intentFilter = new IntentFilter("android.media.RINGER_MODE_CHANGED");
         registerReceiver(this.mReceiver, intentFilter);
         this.mNotificationManager = (NotificationManager)getSystemService("notification");
@@ -844,7 +844,7 @@ public class SoftKeyboard extends InputMethodService implements KeyboardView.OnK
     public View onCreateInputView() {
         if (DEBUG)
             Log.d(TAG, "onCreateInputView");
-        this.mInputView = (LatinKeyboardView)getLayoutInflater().inflate(2130903045, null);
+        this.mInputView = (LatinKeyboardView)getLayoutInflater().inflate(R.layout.input, null);
         this.mKeyboardSwitcher.setInputView(this.mInputView);
         this.mKeyboardSwitcher.makeKeyboards(true);
         this.mInputView.setOnKeyboardActionListener(this);
@@ -860,7 +860,7 @@ public class SoftKeyboard extends InputMethodService implements KeyboardView.OnK
     }
 
     public boolean onEvaluateFullscreenMode() {
-        return (super.onEvaluateFullscreenMode() && getResources().getBoolean(2131361793));
+        return (super.onEvaluateFullscreenMode() && getResources().getBoolean(R.bool.config_use_fullscreen_mode));
     }
 
     public void onFinishInput() {
@@ -1318,7 +1318,7 @@ public class SoftKeyboard extends InputMethodService implements KeyboardView.OnK
                     if (this.mIsTranslitKeys) {
                         i = this.hardIcon;
                     } else {
-                        i = 2130837560;
+                        i = R.drawable.us_flag;
                     }
                     keyboardSwitcher.setKeyboardFlag(i);
                     return;

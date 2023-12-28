@@ -38,10 +38,10 @@ public class LatinKeyboard extends Keyboard {
     public LatinKeyboard(Context paramContext, int paramInt1, int paramInt2) {
         super(paramContext, paramInt1, paramInt2);
         Resources resources = paramContext.getResources();
-        this.mShiftLockIcon = paramContext.getResources().getDrawable(2130837557);
-        this.mShiftLockPreviewIcon = paramContext.getResources().getDrawable(2130837539);
+        this.mShiftLockIcon = paramContext.getResources().getDrawable(R.drawable.sym_keyboard_shift_locked);
+        this.mShiftLockPreviewIcon = paramContext.getResources().getDrawable(R.drawable.sym_keyboard_feedback_shift_locked);
         this.mShiftLockPreviewIcon.setBounds(0, 0, this.mShiftLockPreviewIcon.getIntrinsicWidth(), this.mShiftLockPreviewIcon.getIntrinsicHeight());
-        sSpacebarVerticalCorrection = resources.getDimensionPixelOffset(2131492869);
+        sSpacebarVerticalCorrection = resources.getDimensionPixelOffset(R.dimen.spacebar_vertical_correction);
     }
 
     public LatinKeyboard(Context paramContext, int paramInt1, CharSequence paramCharSequence, int paramInt2, int paramInt3) {
@@ -94,7 +94,7 @@ public class LatinKeyboard extends Keyboard {
                         this.mEnterKey.iconPreview = null;
                         this.mEnterKey.label = ":-)";
                         this.mEnterKey.text = ":-) ";
-                        this.mEnterKey.popupResId = 2130968588;
+                        this.mEnterKey.popupResId = R.xml.popup_smileys;
                     } else {
                         break;
                     }
@@ -104,27 +104,27 @@ public class LatinKeyboard extends Keyboard {
                 case 2:
                     this.mEnterKey.iconPreview = null;
                     this.mEnterKey.icon = null;
-                    this.mEnterKey.label = paramResources.getText(2131427334);
+                    this.mEnterKey.label = paramResources.getText(R.string.label_go_key);
                     if (this.mEnterKey.iconPreview != null)
                         this.mEnterKey.iconPreview.setBounds(0, 0, this.mEnterKey.iconPreview.getIntrinsicWidth(), this.mEnterKey.iconPreview.getIntrinsicHeight());
                     return;
                 case 5:
                     this.mEnterKey.iconPreview = null;
                     this.mEnterKey.icon = null;
-                    this.mEnterKey.label = paramResources.getText(2131427335);
+                    this.mEnterKey.label = paramResources.getText(R.string.label_next_key);
                     if (this.mEnterKey.iconPreview != null)
                         this.mEnterKey.iconPreview.setBounds(0, 0, this.mEnterKey.iconPreview.getIntrinsicWidth(), this.mEnterKey.iconPreview.getIntrinsicHeight());
                     return;
                 case 6:
                     this.mEnterKey.iconPreview = null;
                     this.mEnterKey.icon = null;
-                    this.mEnterKey.label = paramResources.getText(2131427336);
+                    this.mEnterKey.label = paramResources.getText(R.string.label_done_key);
                     if (this.mEnterKey.iconPreview != null)
                         this.mEnterKey.iconPreview.setBounds(0, 0, this.mEnterKey.iconPreview.getIntrinsicWidth(), this.mEnterKey.iconPreview.getIntrinsicHeight());
                     return;
                 case 3:
-                    this.mEnterKey.iconPreview = paramResources.getDrawable(2130837537);
-                    this.mEnterKey.icon = paramResources.getDrawable(2130837555);
+                    this.mEnterKey.iconPreview = paramResources.getDrawable(R.drawable.sym_keyboard_feedback_search);
+                    this.mEnterKey.icon = paramResources.getDrawable(R.drawable.sym_keyboard_search);
                     this.mEnterKey.label = null;
                     if (this.mEnterKey.iconPreview != null)
                         this.mEnterKey.iconPreview.setBounds(0, 0, this.mEnterKey.iconPreview.getIntrinsicWidth(), this.mEnterKey.iconPreview.getIntrinsicHeight());
@@ -132,7 +132,7 @@ public class LatinKeyboard extends Keyboard {
                 case 4:
                     this.mEnterKey.iconPreview = null;
                     this.mEnterKey.icon = null;
-                    this.mEnterKey.label = paramResources.getText(2131427337);
+                    this.mEnterKey.label = paramResources.getText(R.string.label_send_key);
                     if (this.mEnterKey.iconPreview != null)
                         this.mEnterKey.iconPreview.setBounds(0, 0, this.mEnterKey.iconPreview.getIntrinsicWidth(), this.mEnterKey.iconPreview.getIntrinsicHeight());
                     return;
@@ -140,8 +140,8 @@ public class LatinKeyboard extends Keyboard {
         } else {
             return;
         }
-        this.mEnterKey.iconPreview = paramResources.getDrawable(2130837536);
-        this.mEnterKey.icon = paramResources.getDrawable(2130837554);
+        this.mEnterKey.iconPreview = paramResources.getDrawable(R.drawable.sym_keyboard_feedback_return);
+        this.mEnterKey.icon = paramResources.getDrawable(R.drawable.sym_keyboard_return);
         this.mEnterKey.label = null;
         if (this.mEnterKey.iconPreview != null)
             this.mEnterKey.iconPreview.setBounds(0, 0, this.mEnterKey.iconPreview.getIntrinsicWidth(), this.mEnterKey.iconPreview.getIntrinsicHeight());

@@ -8,6 +8,8 @@ import android.util.AttributeSet;
 import android.view.LayoutInflater;
 import android.view.View;
 
+import com.zyfra.mdcplus.keyboard.R;
+
 public class NumberPickerPreference extends DialogPreference implements NumberPicker.OnChangedListener {
     private int currentValue;
 
@@ -44,11 +46,11 @@ public class NumberPickerPreference extends DialogPreference implements NumberPi
     }
 
     protected View onCreateDialogView() {
-        View view = ((LayoutInflater)getContext().getSystemService("layout_inflater")).inflate(2130903052, null);
-        this.np = (NumberPicker)view.findViewById(2131165221);
+        View view = ((LayoutInflater)getContext().getSystemService("layout_inflater")).inflate(R.layout.number_picker_prefs, null);
+        this.np = (NumberPicker)view.findViewById(R.id.picker);
         this.np.setOnChangeListener(this);
         this.np.setRange(0, 100);
-        view.findViewById(2131165222).setOnClickListener(new View.OnClickListener() {
+        view.findViewById(R.id.testVibrate).setOnClickListener(new View.OnClickListener() {
             public void onClick(View param1View) {
                 if (NumberPickerPreference.this.mVibrator == null)
                     NumberPickerPreference.access$002(NumberPickerPreference.this, (Vibrator)NumberPickerPreference.this.getContext().getSystemService("vibrator"));

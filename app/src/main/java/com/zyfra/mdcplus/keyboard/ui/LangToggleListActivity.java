@@ -12,6 +12,8 @@ import android.widget.ArrayAdapter;
 import android.widget.ListAdapter;
 import android.widget.ListView;
 
+import com.zyfra.mdcplus.keyboard.R;
+
 import java.util.ArrayList;
 import java.util.Collections;
 import java.util.List;
@@ -32,7 +34,7 @@ public class LangToggleListActivity extends Activity {
     private ListView mListView;
 
     private View.OnClickListener mOnClickListener = new View.OnClickListener() {
-        public void onClick(View param1View) {
+        public void onClick(View param1View) {// Опять дичь
             switch (param1View.getId()) {
                 default:
                     return;
@@ -85,12 +87,12 @@ public class LangToggleListActivity extends Activity {
 
     protected void onCreate(Bundle paramBundle) {
         super.onCreate(paramBundle);
-        setContentView(2130903043);//xml
-        this.mLangMyKeyCode = getString(2131427429);//xml
+        setContentView(R.layout.activity_lang_toggle_settings);
+        this.mLangMyKeyCode = getString(R.string.lang_toggle_my_keycode);
         this.settings = PreferenceManager.getDefaultSharedPreferences((Context)this);
-        this.mListView = (ListView)findViewById(2131165202);//xml
+        this.mListView = (ListView)findViewById(R.id.listView);//xml
         this.mListView.setChoiceMode(1);
-        String[] arrayOfString = getResources().getStringArray(2131099655);//xml
+        String[] arrayOfString = getResources().getStringArray(R.array.lang_toggle_entries);
         Collections.addAll(this.mEntries, arrayOfString);
         this.mCurrentCustomKeyCode = this.settings.getInt("key_lang_toggle_custom", -1);
         if (this.mCurrentCustomKeyCode == -1) {
@@ -98,10 +100,10 @@ public class LangToggleListActivity extends Activity {
         } else {
             this.mEntries.add(this.mLangMyKeyCode + " : " + this.mCurrentCustomKeyCode);
         }
-        arrayOfString = getResources().getStringArray(2131099656);//xml
+        arrayOfString = getResources().getStringArray(R.array.lang_toggle_values);
         Collections.addAll(this.mValues, arrayOfString);
         this.mValues.add("custom");
-        this.mAdapter = new ArrayAdapter((Context)this, 17367055, this.mEntries);//xml
+        this.mAdapter = new ArrayAdapter((Context)this, 17367055, this.mEntries);//xml нету
         this.mListView.setAdapter((ListAdapter)this.mAdapter);
         this.mListView.setOnItemClickListener(new AdapterView.OnItemClickListener() {
             public void onItemClick(AdapterView<?> param1AdapterView, View param1View, int param1Int, long param1Long) {
@@ -111,7 +113,7 @@ public class LangToggleListActivity extends Activity {
                 }
             }
         });
-        String str = getString(2131427330);//xml
+        String str = getString(R.string.default_lang_toggle);//xml
         str = this.settings.getString("key_lang_toggle", str);
         int j = this.mValues.size();
         int i = 0;
@@ -123,10 +125,10 @@ public class LangToggleListActivity extends Activity {
                     i++;
                     continue;
                 }
-            this.mCustomToggleView = findViewById(2131165205);//xml
+            this.mCustomToggleView = findViewById(R.id.customToggleView);
             this.mCustomToggleView.setVisibility(8);
-            findViewById(2131165203).setOnClickListener(this.mOnClickListener);//xml
-            findViewById(2131165204).setOnClickListener(this.mOnClickListener);//xml
+            findViewById(R.id.cancel).setOnClickListener(this.mOnClickListener);
+            findViewById(R.id.ok).setOnClickListener(this.mOnClickListener);
             return;
         }
     }

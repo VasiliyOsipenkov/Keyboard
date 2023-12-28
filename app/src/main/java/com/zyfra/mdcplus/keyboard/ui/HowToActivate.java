@@ -6,6 +6,8 @@ import android.content.pm.PackageManager;
 import android.os.Bundle;
 import android.widget.TextView;
 
+import com.zyfra.mdcplus.keyboard.R;
+
 public class HowToActivate extends Activity {
     private PackageManager pm;
 
@@ -13,15 +15,15 @@ public class HowToActivate extends Activity {
 
     protected void onCreate(Bundle paramBundle) {
         super.onCreate(paramBundle);
-        setContentView(2130903040);//xml
+        setContentView(R.layout.activity_how_to_activate);
         this.pm = getPackageManager();
-        this.tvName = (TextView)findViewById(2131165188);//xml
+        this.tvName = (TextView)findViewById(R.id.tvName);
         try {
             PackageInfo packageInfo = this.pm.getPackageInfo(getPackageName(), 0);
             this.tvName.setText(this.pm.getApplicationLabel(packageInfo.applicationInfo) + " v" + packageInfo.versionName);
             return;
         } catch (android.content.pm.PackageManager.NameNotFoundException nameNotFoundException) {
-            this.tvName.setText(2131427331);//xml
+            this.tvName.setText(R.string.ime_name);//xml
             nameNotFoundException.printStackTrace();
             return;
         }
